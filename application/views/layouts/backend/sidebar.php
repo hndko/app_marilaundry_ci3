@@ -12,7 +12,7 @@
 				<img src="<?= base_url('assets/dist/img/user2-160x160.jpg') ?>" class="img-circle elevation-2" alt="User Image">
 			</div>
 			<div class="info">
-				<a href="#" class="d-block"><?= $this->session->userdata('fullname') ?? $this->session->userdata('username') ?></a>
+				<a href="<?= site_url('profile') ?>" class="d-block"><?= current_user()->fullname ?? current_user()->username ?></a>
 			</div>
 		</div>
 
@@ -69,6 +69,20 @@
 					<a href="<?= site_url('settings') ?>" class="nav-link <?= $this->uri->segment(1) == 'settings' ? 'active' : '' ?>">
 						<i class="nav-icon fas fa-cogs"></i>
 						<p>Pengaturan</p>
+					</a>
+				</li>
+				<?php if (in_array(current_user()->role, ['admin', 'super_admin', 'owner'])) : ?>
+					<li class="nav-item">
+						<a href="<?= site_url('users') ?>" class="nav-link <?= $this->uri->segment(1) == 'users' ? 'active' : '' ?>">
+							<i class="nav-icon fas fa-users-cog"></i>
+							<p>Manajemen User</p>
+						</a>
+					</li>
+				<?php endif; ?>
+				<li class="nav-item">
+					<a href="<?= site_url('profile') ?>" class="nav-link <?= $this->uri->segment(1) == 'profile' ? 'active' : '' ?>">
+						<i class="nav-icon fas fa-user-circle"></i>
+						<p>Profil Saya</p>
 					</a>
 				</li>
 				<li class="nav-item">

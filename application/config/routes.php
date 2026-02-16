@@ -102,3 +102,15 @@ $route['reports/expenses_pdf'] = 'reports/expenses_pdf';
 // Settings Routes
 $route['settings'] = 'settings/index';
 $route['settings/update'] = 'settings/update';
+
+// Users Management Routes
+$route['users'] = 'users/index';
+$route['users/create'] = 'users/create';
+$route['users/store'] = 'users/store';
+$route['users/edit/(:num)'] = 'users/edit/$1';
+$route['users/update/(:num)'] = 'users/update/$1';
+$route['users/delete/(:num)'] = 'users/delete/$1';
+
+// Profile Routes
+$route['profile'] = 'profile/index';
+$route['profile/update'] = 'profile/update';
