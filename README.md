@@ -1,91 +1,95 @@
 # MariLaundry 🧺
 
-**A Modern and Efficient Laundry Management System**
+**Sistem Manajemen Laundry yang Modern dan Efisien**
 
-MariLaundry is a comprehensive web-based application designed to streamline laundry business operations. Built with a focus on speed, reliability, and modern user experience, this platform empowers laundry owners to manage transactions, customers, services, and finances in one integrated dashboard.
-
----
-
-## ✨ Key Features
-
-### 📊 Advanced Dashboard & Analytics
-
-- **Live KPI Tracking**: Monitor total orders, active customers, and revenue at a glance.
-- **Revenue Trends**: Interactive charts showing monthly income progress.
-- **Service Distribution**: Visualization of top-performing laundry services.
-- **Recent Activity**: Quick view of latest orders and their status.
-
-### 💼 Core Management
-
-- **Transaction Entry**: Streamlined workflow for creating orders, weighing, and service selection.
-- **Master Data**: Full CRUD for Customer databases and Laundry Services.
-- **Finance & Expenses**: Track operational costs and maintain financial health.
-- **Reporting**: Generate daily/monthly reports with PDF export capability.
-
-### 📱 Notification System
-
-- **WhatsApp Integration**: Automated order status updates (Ready to Pickup/Finished) sent directly to customers via Fonnte API.
-- **Real-time Status**: Keep customers informed and improve service satisfaction.
-
-### 🔒 Security & User Management
-
-- **Role-Based Access Control (RBAC)**: Defined roles for **Super Admin, Admin, Owner, and Operator**.
-- **Modern Authentication**: Secure login with password hashing and a beautiful, split-screen glassmorphism interface.
-- **System Protection**: Protection for core system accounts from unauthorized modification.
+MariLaundry adalah aplikasi berbasis web komprehensif yang dirancang untuk menyederhanakan operasional bisnis laundry. Dibangun dengan fokus pada kecepatan, keandalan, dan pengalaman pengguna yang modern, platform ini memudahkan pemilik laundry untuk mengelola transaksi, pelanggan, layanan, dan keuangan dalam satu dashboard terintegrasi.
 
 ---
 
-## 🛠️ Technology Stack
+## ✨ Fitur Utama
 
-| Layer              | Technology                                |
-| ------------------ | ----------------------------------------- |
-| **Core Framework** | PHP / CodeIgniter 3.1.13                  |
-| **Database**       | MySQL (Optimized with UTF8mb4 for Emojis) |
-| **Frontend UI**    | AdminLTE 3 / Bootstrap 4                  |
-| **Interactive UI** | Chart.js, DataTables, SweetAlert2         |
-| **Integration**    | Fonnte WhatsApp API Gateway               |
-| **Tools**          | Composer, PHPUnit (Dev)                   |
+### 📊 Dashboard & Analitik Lanjutan
+
+- **Pelacakan KPI Langsung**: Pantau total pesanan, pelanggan aktif, dan pendapatan secara sekilas.
+- **Tren Pendapatan**: Grafik interaktif yang menunjukkan perkembangan pemasukan bulanan.
+- **Distribusi Layanan**: Visualisasi layanan laundry yang paling banyak diminati.
+- **Aktivitas Terbaru**: Pantauan cepat pesanan terbaru beserta statusnya.
+
+### 💼 Manajemen Inti
+
+- **Input Transaksi**: Alur kerja efisien untuk pembuatan pesanan, penimbangan, dan pemilihan layanan.
+- **Data Master**: Database Pelanggan dan Layanan Laundry yang lengkap (CRUD).
+- **Keuangan & Pengeluaran**: Pantau biaya operasional untuk menjaga kesehatan finansial bisnis.
+- **Laporan**: Generate laporan harian/bulanan dengan fitur ekspor ke PDF.
+
+### 📱 Sistem Notifikasi
+
+- **Integrasi WhatsApp**: Pembaruan status pesanan (Siap Diambil/Selesai) yang dikirim otomatis ke pelanggan melalui API Fonnte.
+- **Status Real-time**: Menjaga pelanggan tetap terinformasi dan meningkatkan kepuasan layanan.
+
+### 🔒 Keamanan & Manajemen User
+
+- **Kontrol Akses Berbasis Role (RBAC)**: Pembagian peran yang jelas untuk **Super Admin, Admin, Owner, dan Operator**.
+- **Autentikasi Modern**: Login aman dengan hashing password dan antarmuka _split-screen glassmorphism_ yang menawan.
+- **Proteksi Sistem**: Perlindungan akun inti sistem dari modifikasi yang tidak sah.
 
 ---
 
-## ⚙️ Installation & Setup
+## 🛠️ Stack Teknologi
 
-1. **Clone the repository**:
+| Lapisan            | Teknologi                            |
+| ------------------ | ------------------------------------ |
+| **Framework Inti** | PHP / CodeIgniter 3.1.13             |
+| **Database**       | MySQL (Optimasi UTF8mb4 untuk Emoji) |
+| **Frontend UI**    | AdminLTE 3 / Bootstrap 4             |
+| **UI Interaktif**  | Chart.js, DataTables, SweetAlert2    |
+| **Integrasi**      | API Gateway WhatsApp Fonnte          |
+| **Tools**          | Composer, PHPUnit (Dev)              |
+
+---
+
+## ⚙️ Instalasi & Setup
+
+1. **Clone repository**:
 
    ```bash
-   git clone https://github.com/yourusername/app_marilaundry_ci3.git
+   git clone https://github.com/username-anda/app_marilaundry_ci3.git
    ```
 
-2. **Configure Database**:
-   - Create a database named `db_marilaundry`.
-   - Import the provided SQL structure or run migrations.
+2. **Konfigurasi Database**:
+   - Buat database dengan nama `db_marilaundry`.
+   - Import struktur SQL yang tersedia atau jalankan migrasi.
 
-3. **Install Dependencies**:
+3. **Install Dependensi**:
 
    ```bash
    composer install
    ```
 
-4. **Environment Configuration**:
-   - Update `application/config/database.php` with your DB credentials.
-   - Configure WhatsApp API Key in the application settings menu.
+4. **Konfigurasi Lingkungan**:
+   - Salin file `.env.example` menjadi `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Buka file `.env` dan sesuaikan kredensial database Anda (Username, Password, Nama Database).
+   - Konfigurasikan API Key WhatsApp di menu pengaturan aplikasi di dalam dashboard.
 
 ---
 
-## 📸 Preview
+## 📸 Pratinjau
 
-_(Structure for your portfolio screenshots)_
+_(Struktur untuk screenshot portfolio Anda)_
 
-| Login Page                                           | Dashboard                                                    |
+| Halaman Login                                        | Dashboard                                                    |
 | ---------------------------------------------------- | ------------------------------------------------------------ |
-| ![Login Redesign](assets/dist/img/preview_login.jpg) | ![Dashboard Overview](assets/dist/img/preview_dashboard.jpg) |
+| ![Redesain Login](assets/dist/img/preview_login.jpg) | ![Ikhtisar Dashboard](assets/dist/img/preview_dashboard.jpg) |
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Penulis
 
 **Kyoo** - _Lead Developer_
 
 ---
 
-> Developed with ❤️ for the Laundry Industry.
+> Dikembangkan dengan ❤️ untuk Industri Laundry Indonesia.
