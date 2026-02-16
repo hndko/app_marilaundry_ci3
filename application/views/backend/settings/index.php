@@ -17,9 +17,12 @@
                         <!-- WhatsApp Gateway Pane -->
                         <div class="tab-pane fade show active" id="wa-pane" role="tabpanel" aria-labelledby="wa-tab">
                             <div class="form-group">
-                                <label for="wa_api_key">Fonnte API Token</label>
-                                <input type="text" name="wa_api_key" id="wa_api_key" class="form-control" value="<?= $settings['wa_api_key'] ?? '' ?>" placeholder="Masukkan Token Fonnte">
-                                <small class="text-muted">Dapatkan token di <a href="https://fonnte.com" target="_blank">fonnte.com</a></small>
+                                <label for="wa_api_key">Fonnte API Token (Device Token)</label>
+                                <input type="text" name="wa_api_key" id="wa_api_key" class="form-control" value="<?= $settings['wa_api_key'] ?? '' ?>" placeholder="Masukkan Device Token Fonnte">
+                                <small class="text-muted">
+                                    Gunakan <b>Device Token</b> (klik tombol Token biru di sebelah nomor WA).<br>
+                                    Dapatkan token di <a href="https://md.fonnte.com/new/device.php" target="_blank">md.fonnte.com/new/device.php</a>
+                                </small>
                             </div>
                             <hr>
                             <h5>Template Pesan</h5>
