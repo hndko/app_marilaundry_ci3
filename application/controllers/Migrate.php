@@ -19,7 +19,7 @@ class Migrate extends CI_Controller
         $this->load->database();
         $query = $this->db->get('users');
         foreach ($query->result() as $row) {
-            echo "User: " . $row->username . " | Email: " . $row->email . " | Role: " . $row->role . "\n";
+            echo "User: " . $row->username . " | Fullname: " . $row->fullname . "\n";
         }
     }
 }

@@ -3,6 +3,12 @@
 class Dashboard extends CI_Controller
 {
 
+	public function __construct()
+	{
+		parent::__construct();
+		auth_middleware();
+	}
+
 	public function index()
 	{
 		$data['page_title'] = 'Dashboard';

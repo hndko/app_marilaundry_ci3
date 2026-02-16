@@ -2,15 +2,17 @@
       <div class="card-body login-card-body">
           <p class="login-box-msg">Sign in to start your session</p>
 
-          <form action="<?= site_url('auth/login_process') ?>" method="post">
+          <form action="<?= site_url('auth/login') ?>" method="post">
               <div class="input-group mb-3">
-                  <input type="email" class="form-control" name="email" placeholder="Email">
+                  <input type="text" class="form-control" name="username" placeholder="Username / Email" value="<?= set_value('username'); ?>">
                   <div class="input-group-append">
                       <div class="input-group-text">
                           <span class="fas fa-envelope"></span>
                       </div>
                   </div>
               </div>
+              <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
+
               <div class="input-group mb-3">
                   <input type="password" class="form-control" name="password" placeholder="Password">
                   <div class="input-group-append">
@@ -19,6 +21,8 @@
                       </div>
                   </div>
               </div>
+              <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
+
               <div class="row">
                   <div class="col-8">
                       <div class="icheck-primary">
