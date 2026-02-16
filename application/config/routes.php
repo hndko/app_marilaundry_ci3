@@ -87,3 +87,15 @@ $route['orders/pay/(:num)'] = 'orders/pay/$1';
 
 # Routes for Settings (Future)
 // $route['settings'] = 'settings/index';
+// Expenses Routes
+$route['expenses'] = 'expenses/index';
+$route['expenses/create'] = 'expenses/create';
+$route['expenses/store'] = 'expenses/store';
+$route['expenses/edit/(:num)'] = 'expenses/edit/$1';
+$route['expenses/update/(:num)'] = 'expenses/update/$1';
+$route['expenses/delete/(:num)'] = 'expenses/delete/$1';
+
+// Reports Routes
+$route['reports'] = 'reports/index';
+$route['reports/expenses'] = 'reports/expenses';
+$route['reports/expenses_pdf'] = 'reports/expenses_pdf';

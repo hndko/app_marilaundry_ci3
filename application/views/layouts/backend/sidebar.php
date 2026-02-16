@@ -39,12 +39,24 @@
                         <p>Transaksi</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= site_url('expenses') ?>" class="nav-link <?= $this->uri->segment(1) == 'expenses' ? 'active' : '' ?>">
+                        <i class="nav-icon fas fa-money-bill-wave"></i>
+                        <p>Pengeluaran</p>
+                    </a>
+                </li>
 
                 <li class="nav-header">SETTINGS</li>
                 <li class="nav-item">
                     <a href="<?= site_url('services') ?>" class="nav-link <?= $this->uri->segment(1) == 'services' ? 'active' : '' ?>">
                         <i class="nav-icon fas fa-list"></i>
                         <p>Layanan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= site_url('reports') ?>" class="nav-link <?= $this->uri->segment(1) == 'reports' ? 'active' : '' ?>">
+                        <i class="nav-icon fas fa-chart-line"></i>
+                        <p>Laporan</p>
                     </a>
                 </li>
                 <!-- Add more menu items here -->
