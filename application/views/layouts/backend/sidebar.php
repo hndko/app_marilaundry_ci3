@@ -22,9 +22,29 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="<?= site_url('dashboard') ?>" class="nav-link">
+                    <a href="<?= site_url('dashboard') ?>" class="nav-link <?= $this->uri->segment(1) == 'dashboard' || $this->uri->segment(1) == '' ? 'active' : '' ?>">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= site_url('customers') ?>" class="nav-link <?= $this->uri->segment(1) == 'customers' ? 'active' : '' ?>">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Pelanggan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= site_url('orders') ?>" class="nav-link <?= $this->uri->segment(1) == 'orders' ? 'active' : '' ?>">
+                        <i class="nav-icon fas fa-file-invoice-dollar"></i>
+                        <p>Transaksi</p>
+                    </a>
+                </li>
+
+                <li class="nav-header">SETTINGS</li>
+                <li class="nav-item">
+                    <a href="<?= site_url('services') ?>" class="nav-link <?= $this->uri->segment(1) == 'services' ? 'active' : '' ?>">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>Layanan</p>
                     </a>
                 </li>
                 <!-- Add more menu items here -->

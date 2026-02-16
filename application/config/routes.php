@@ -58,3 +58,32 @@ $route['auth'] = 'auth/login';
 
 # Routes for Backend
 $route['dashboard'] = 'dashboard/index';
+
+# Routes for Services
+$route['services'] = 'services/index';
+$route['services/create'] = 'services/create';
+$route['services/store'] = 'services/store';
+$route['services/edit/(:num)'] = 'services/edit/$1';
+$route['services/update/(:num)'] = 'services/update/$1';
+$route['services/delete/(:num)'] = 'services/delete/$1';
+$route['services/show/(:num)'] = 'services/show/$1';
+
+# Routes for Customers
+$route['customers'] = 'customers/index';
+$route['customers/create'] = 'customers/create';
+$route['customers/store'] = 'customers/store';
+$route['customers/edit/(:num)'] = 'customers/edit/$1';
+$route['customers/update/(:num)'] = 'customers/update/$1';
+$route['customers/delete/(:num)'] = 'customers/delete/$1';
+$route['customers/show/(:num)'] = 'customers/show/$1';
+
+# Routes for Transactions
+$route['orders'] = 'orders/index';
+$route['orders/create'] = 'orders/create';
+$route['orders/store'] = 'orders/store';
+$route['orders/show/(:num)'] = 'orders/show/$1';
+$route['orders/update_status/(:num)'] = 'orders/update_status/$1';
+$route['orders/pay/(:num)'] = 'orders/pay/$1';
+
+# Routes for Settings (Future)
+// $route['settings'] = 'settings/index';
