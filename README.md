@@ -92,4 +92,13 @@ _(Struktur untuk screenshot portfolio Anda)_
 
 ---
 
+## 🌟 Dukungan & Donasi
+
+Jika Anda menyukai repositori ini dan merasa terbantu, jangan lupa untuk memberikan **Star**! ⭐
+
+Jika Anda ingin mendukung pengembangan lebih lanjut atau memberikan donasi, Anda dapat menghubungi saya melalui WhatsApp:
+👉 [**Hubungi via WhatsApp (087780081554)**](https://wa.me/6287780081554)
+
+---
+
 > Dikembangkan dengan ❤️ untuk Industri Laundry Indonesia.
