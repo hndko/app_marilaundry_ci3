@@ -99,3 +99,6 @@ $route['expenses/delete/(:num)'] = 'expenses/delete/$1';
 $route['reports'] = 'reports/index';
 $route['reports/expenses'] = 'reports/expenses';
 $route['reports/expenses_pdf'] = 'reports/expenses_pdf';
+// Settings Routes
+$route['settings'] = 'settings/index';
+$route['settings/update'] = 'settings/update';

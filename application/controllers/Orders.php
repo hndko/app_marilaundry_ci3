@@ -10,6 +10,8 @@ class Orders extends CI_Controller
         $this->load->model('Order_model');
         $this->load->model('Customer_model');
         $this->load->model('Service_model');
+        $this->load->model('Setting_model');
+        $this->load->helper('whatsapp');
     }
 
     public function index()
@@ -99,6 +101,19 @@ class Orders extends CI_Controller
                 $this->session->set_flashdata('error', 'Gagal membuat transaksi!');
                 redirect('orders/create');
             } else {
+                // Send Notification
+                $template = $this->Setting_model->get_value('wa_template_accepted');
+                if ($template) {
+                    $customer = $this->Customer_model->get_by_id($customer_id);
+                    $message = format_wa_message($template, [
+                        'invoice' => $invoice_code,
+                        'customer' => $customer->name,
+                        'estimation' => date('d/m/Y H:i', strtotime($estimation_date)),
+                        'total' => 'Rp ' . number_format($total_price, 0, ',', '.')
+                    ]);
+                    send_wa($customer->phone, $message);
+                }
+
                 $this->session->set_flashdata('success', 'Transaksi berhasil dibuat! Invoice: ' . $invoice_code);
                 redirect('orders');
             }
@@ -131,6 +146,26 @@ class Orders extends CI_Controller
 
         if ($status) {
             $this->Order_model->update($id, ['status' => $status]);
+
+            // Send Notification based on status
+            $template_key = '';
+            if ($status == 'diproses') $template_key = 'wa_template_process';
+            elseif ($status == 'selesai') $template_key = 'wa_template_ready';
+            elseif ($status == 'diambil') $template_key = 'wa_template_taken';
+
+            if ($template_key) {
+                $template = $this->Setting_model->get_value($template_key);
+                if ($template) {
+                    $message = format_wa_message($template, [
+                        'invoice' => $order->invoice_code,
+                        'customer' => $order->customer_name,
+                        'estimation' => date('d/m/Y H:i', strtotime($order->estimation_date)),
+                        'total' => 'Rp ' . number_format($order->total_price, 0, ',', '.')
+                    ]);
+                    send_wa($order->customer_phone, $message);
+                }
+            }
+
             $this->session->set_flashdata('success', 'Status transaksi diperbarui!');
         }
         redirect('orders/show/' . $id);

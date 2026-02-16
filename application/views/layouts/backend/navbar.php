@@ -14,11 +14,7 @@
                 <i class="fas fa-expand-arrows-alt"></i>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="<?= site_url('auth/logout') ?>" role="button">
-                <i class="fas fa-sign-out-alt"></i> Logout
-            </a>
-        </li>
+
     </ul>
 </nav>
 <!-- /.navbar -->
